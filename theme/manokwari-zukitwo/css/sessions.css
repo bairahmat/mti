@@ -15,6 +15,7 @@ li {
     border-radius:5px;
 	background-image: -webkit-linear-gradient(#F5F5F5, #D7D7D7);
 	border: 1px solid #C8C8C8;
+	box-shadow:0 1px 1px rgba(0,0,0,0.3);
 }
 li img {
 	width: 26px;
