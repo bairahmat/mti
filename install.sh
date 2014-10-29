@@ -1,7 +1,7 @@
 #!/bin/bash
 # ==================================================================== #
 NameApplications="Manokwari-Theme-Installer [MTI]"
-Version="0.1.2"
+Version="0.1.3"
 Creator="Aris Winardi"
 eMail="ariswinardy@gmail.com"
 Forked="Blankon Manokwari Theme Changer Script | Ari Effendi | arieffendi@gmail.com"
