@@ -119,6 +119,10 @@ function restore {
 	echo "Succes restore Manokwari theme..."
 }
 
+function clean {
+	rm -rf $PWD/backup/*
+	echo " Success clean restored theme ";
+}
 
 function menu {
 	echo "=================================================================="
@@ -130,6 +134,7 @@ function menu {
 	echo " 1 Install new manokwari theme"
 	echo " 2 Backup manokwari theme"
 	echo " 3 Restore manokwari theme"
+	echo " 4 Clean Restored theme"
 	echo ""
 	echo " Q Quit"
 	echo ""
@@ -148,6 +153,9 @@ case $option in
 		;;
 	3)
 		restore
+		;;
+	4)
+		clean
 		;;
 	q|Q)
 		exit
