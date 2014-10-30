@@ -1,0 +1,223 @@
+body {
+	background-color: transparent;
+    overflow: hidden;
+    -webkit-user-select: none;
+    padding: 0px;
+    margin: 0px;
+    background-size: cover;
+   	background-position: 50%;
+    font-family: Cantarell, Sans-Serif;
+    width: 100%;
+    height: 100%;
+}
+
+#overlay {
+	position: absolute;
+	z-index: 2;
+	left: 0px;
+	width: 0px;
+	width: 100%;
+	height: 100%;
+
+	background-size: cover; 
+	background-position: 50%;
+}
+
+#bg {
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	width: 0px;
+	width: 100%;
+	height: 100%;
+
+	background-size: cover; 
+	background-position: 50%;
+}
+
+#base {
+	position: absolute;
+	z-index: 3;
+	left: 0px;
+	width: 0px;
+	width: 100%;
+	height: 100%;
+  
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: end;
+    -webkit-box-align: center;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+[draggable] {
+    -webkit-user-select: none;
+}
+
+#launcher {
+	background:rgba(0,0,0,0);
+    height: 35px;
+    max-width: 98%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 20;
+    -webkit-transition: all 200ms ease-in-out;
+    -webkit-box-align: center;
+	margin-bottom: 65px;
+	padding-right: 62px;
+}
+
+#launcher:before, #launcher:after {
+	content: " ";
+	position:fixed;
+	margin-top: 35px;
+	width: 4px;
+}
+#launcher:before {
+	height: 64px;
+	margin-left:26px;
+	border-left:1px solid #FE7C93;
+}
+#launcher:after {
+	height: 64px;
+	margin-left:31px;
+	border-right:1px solid #FE7C93;
+}
+
+#launcher:before,
+#launcher:after,
+.ui-launcher-entry-img-holder {
+    background-image: -webkit-linear-gradient(#FF8C9F, #FE7C93);
+	border-top:1px solid #FE7C93;
+}
+
+.ui-launcher-entry-wrapper {
+    display: inline-block;
+    height: 98px;
+    margin: 0;
+    vertical-align: middle;
+    -webkit-box-align: center;
+}
+
+.ui-launcher-entry-wrapper,
+.ui-launcher-entry-img-holder {
+    width: 58px;
+}
+
+.ui-launcher-entry {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    text-align: center;
+    width: 120px;
+}
+
+.ui-launcher-entry span {
+    white-space: nowrap;
+    text-align: center;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    color:transparent;
+    font-size: 10px;
+   	height: 16px;
+    max-width: 105px;
+    padding: 4px 7px 4px 7px;
+    margin: 0px;
+    vertical-align: middle;
+	z-index: -5;
+}
+
+.ui-launcher-entry:hover span {
+	content: " ";
+	position:relative;
+	top: 2px;
+	display: block;
+	background:#FE7C93;
+	font-size: 11px;
+	text-align: center;
+	color: #eee;
+	z-index: 100;
+}
+
+.ui-launcher-entry-img-holder {
+	content:"";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    height: 64px;
+    margin-top: 35px;
+    z-index: 12;
+    position:fixed;
+    margin-left: 31px;
+}
+
+.ui-launcher-entry img {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    margin: 8px 8px 12px 8px;
+    z-index: 25;
+}
+
+.ui-launcher-entry:hover img {
+   -webkit-transform:scale(1.1);
+
+}
+
+.ui-bin-img {
+    margin: 10px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid transparent;
+    background-color: rgba(204, 204, 204, 0.5);
+    
+    box-shadow: 0px 0px 10px #000;
+    -webkit-transition: all 100ms ease-in-out;
+}
+
+.ui-bin-img.enter,
+.ui-bin:hover {
+    width: 70px;
+    height: 70px;
+} 
+
+.ui-bin {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgba(204, 204, 204, 0.8);
+    opacity: 0;
+    -webkit-transition: all 200ms ease-out;
+    background: transparent;
+}
+
+.ui-bin.enter {
+    background-color: #990F0F;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    background: rgba(191,191,191,0.1);
+ 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(191,191,191,0)
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(191,191,191,0.5)
+}
