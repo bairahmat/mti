@@ -51,8 +51,11 @@ function install {
 
 		# Install new theme ================================================
 		echo "Install new theme..."
-
+		
+		sudo rm -R /usr/lib/manokwari/system/*
 		sudo cp -R $PWD/theme/${FILE[$index-1]}/* /usr/lib/manokwari/system/
+		sudo chmod -R 755 /usr/lib/manokwari/system/
+		
 		#cp -R $PWD/theme/${FILE[$index-1]}/* $PWD/contoh-install/
 
 	
