@@ -20,7 +20,7 @@ function sleep(milliseconds) {
   }
 }
 function MocpStart(){
-	Utils.run_command("mocp");
+	Utils.run_command("mocp -S");
 	Utils.run_command("mocp -u s");
 	Utils.run_command("mocp -u r");
 }

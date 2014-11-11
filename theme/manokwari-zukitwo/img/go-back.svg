@@ -13,7 +13,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="go-down.svg">
+   sodipodi:docname="go-back.svg">
   <metadata
      id="metadata12">
     <rdf:RDF>
@@ -42,8 +42,8 @@
      inkscape:showpageshadow="false"
      borderlayer="true"
      inkscape:zoom="29.5"
-     inkscape:cx="2.3161738"
-     inkscape:cy="8.2091056"
+     inkscape:cx="2.7123193"
+     inkscape:cy="7.6647369"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -89,7 +89,7 @@
   <path
      inkscape:connector-curvature="0"
      id="rect4194"
-     d="M 14.000002,5.035156 13.964842,5 12.621092,5 7.9999982,9.6230464 3.3789038,4.9999999 l -1.34375,0 -0.03516,0.035156 L 7.9628888,11 l 0.037109,0 0.037109,0 z"
+     d="m 10.964842,1.9999958 0.03516,0.03516 0,1.34375 -4.6230468,4.6210939 4.6230468,4.6210943 0,1.34375 -0.03516,0.03516 -5.9648442,-5.9628949 0,-0.037109 0,-0.037109 z"
      style="color:#000000;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
      sodipodi:nodetypes="ccccccccccc" />
 </svg>

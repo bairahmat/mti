@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg11037" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="96" width="96" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs11039">
+  <linearGradient id="linearGradient11642" y2="1046.1" gradientUnits="userSpaceOnUse" y1="962.62" gradientTransform="matrix(1.15 0 0 1.15 -7.1999 -150.65)" x2="48" x1="48">
+   <stop id="stop4148-2-7" style="stop-color:#3abef0" offset="0"/>
+   <stop id="stop4150-8-4" style="stop-color:#0f96c9" offset="1"/>
+  </linearGradient>
+  <clipPath id="clipPath3009" clipPathUnits="userSpaceOnUse">
+   <path id="path3011" style="opacity:.15;fill:#fff" d="m-2 956.36h-96v33.562l96 25.687v-59.25z"/>
+  </clipPath>
+ </defs>
+ <metadata id="metadata11042">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(0 -956.36)">
+  <rect id="rect3867" style="fill:url(#linearGradient11642)" rx="25" ry="25" height="92" width="92" y="958.36" x="2"/>
+  <path id="path6437" style="fill:#fff" d="m54.198 983.21c-4.01 1.217-7.8688 6.6325-6.6583 12.759-13.309-0.80148-19.187-7.9334-22.721-11.346-3.6023 6.3592 0.09183 12.54 3.3186 14.541-1.7029 0.0937-3.7627-0.64243-4.785-1.2828-0.38849 5.8667 4.392 9.9336 8.459 10.988-1.3001 0.3878-2.5254 0.44-4.6199 0.1283 1.7836 5.9005 6.5755 7.4797 10.145 7.7396-4.5953 3.9877-10.114 4.8571-16.114 4.5638 15.558 9.5185 31.269 3.6624 38.916-3.8074 6.4213-6.2728 9.2919-15.666 9.3912-24.07 1.4697-1.1945 4.4415-3.7262 5.2491-5.7078-1.1721 0.45091-3.4908 1.5236-5.9104 1.62 1.9927-1.3057 4.2763-3.9223 4.5155-5.968-2.2064 1.2017-4.7597 2.2429-6.9465 2.575-4.1225-3.9797-8.1368-3.9762-12.239-2.7313z"/>
+  <rect id="rect3003" style="opacity:.15;fill:#fff" transform="translate(98 3.8281e-7)" clip-path="url(#clipPath3009)" rx="25" ry="25" height="92" width="92" y="958.36" x="-96"/>
+ </g>
+</svg>

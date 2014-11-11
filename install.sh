@@ -129,7 +129,7 @@ function clean {
 
 function menu {
 	echo "=================================================================="
-	echo "  $NameApplications | $Version"
+	echo "  $NameApplications | V$Version"
 	echo "  $Creator | $eMail"
 	echo "------------------------------------------------------------------"
 	echo "You can use following function"

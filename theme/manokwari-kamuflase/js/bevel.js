@@ -10,7 +10,6 @@ function RunFacebook() {
 function RunTwitter() {
 	Utils.run_command("exo-open --launch WebBrowser %u https://twitter.com/");
 }
-
 //mocp
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -21,7 +20,7 @@ function sleep(milliseconds) {
   }
 }
 function MocpStart(){
-	Utils.run_command("mocp");
+	Utils.run_command("mocp -S");
 	Utils.run_command("mocp -u s");
 	Utils.run_command("mocp -u r");
 }
@@ -33,8 +32,8 @@ function MocpTitle(){
 function MocpBackward(){Utils.run_command("mocp -r");MocpTitle();}
 function MocpPause(){Utils.run_command("mocp -G");MocpTitle();}
 function MocpPlay(){
-	if(Utils.run_command("mocp") == false){
-		Utils.run_command("mocp");
+	if(Utils.run_command("mocp -S") == false){
+		Utils.run_command("mocp -S");
 		Utils.run_command("mocp -p");
 	}
 	else{Utils.run_command("mocp -p");}
@@ -58,6 +57,7 @@ $(document).ready(function() {
 	});
 	
 });
+
 
 
 // gnome control center

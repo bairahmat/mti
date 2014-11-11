@@ -1,6 +1,6 @@
 #bevel {
-    background: #D4D4D4;
-    border-left: 1px solid #BFBFBF;
+    background:rgba(0,0,0,0.7);
+    border-left: 1px solid #000;
     height: 100%;
     width: 260px;
     overflow-x: hidden;
@@ -15,21 +15,26 @@
 	right: 0px;
 }
 #sosmed {
-	margin-top: 35px;
-	color:#1a1a1a;
+	margin-top: 0px;
 	font-size: 14px;
 	font-family: 'Aurulent Sans';
 	text-align:center;
-	cursor:default;
+	text-shadow: 0 2px 2px #000;
+	overflow-y:auto;
+	box-shadow: 0 1px 0 rgba(255,255,255,.05) inset;
+	color: #bbb;
+	text-align:center;
 }
 .sosmed {
 	width:auto;
 	height: auto;
-	margin-top:8px;
+	margin-top:0px;
 	font-family: 'Aurulent Sans';
 	text-align:center;
 	overflow-y:auto;
 	padding:5px;
+	box-shadow: 0 1px 0 rgba(255,255,255,.05) inset;
+	background: transparent;
 }
 .sosmed img {
 	width:28px;
@@ -44,13 +49,12 @@
 	cursor:pointer;
 }
 .sosmed li:hover{
-	-webkit-transform:scale(1.2);	
-	-webkit-transition: all 0.2s ease-in-out;	
+	-webkit-transition: all 0.2s ease-in-out;
+	filter: drop-shadow(0px 0px 10px #000);
+    -webkit-filter: drop-shadow(0px 0px 10px #000);
 }
-
 #system_settings {
-	margin-top: 35px;
-	color:#1a1a1a;
+	margin-top: 0px;
 	font-size: 14px;
 	font-family: 'Aurulent Sans';
 	text-align:center;
@@ -59,19 +63,26 @@
 .system {
 	width:auto;
 	height: auto;
-	margin-top:8px;
+	margin-top:0px;
 	font-family: 'Aurulent Sans';
 	text-align:center;
 	overflow-y:auto;
+		box-shadow: 0 1px 0 rgba(255,255,255,.05) inset;
+		background: transparent;
+		color: #ddd;
+		text-shadow: 0 2px 2px #000;
+		border-bottom-left-radius:2px;
+		border-bottom-right-radius:2px;
 }
 .system img {
 	width:28px;
 	height:28px;
 	margin-bottom: 5px;
 }
+
 .system span {
 	font-size: 12px;
-	color:#1a1a1a;
+	color:#888;
 	text-align:center;
 }
 .system li {
@@ -82,43 +93,51 @@
 	margin: 1px;
 	padding: 2px 10px;
 	text-align:center;
+	border: 1px solid transparent;
+	border-radius: 5px;
 	cursor:pointer;
-	border-radius:5px;
-	
 }
 .system li:hover{
-	background-image: -webkit-linear-gradient(#7DACDB, #6699CC);
-	color:#1a1a1a;
+	background: rgba(0,0,0,0.8);
 	-webkit-transition: all 0.2s ease-in-out;
 }
 #time {
 	width: 260px;
-	height: 60px;
+	height: auto;
 	position: absolute;
-	background-image: -webkit-linear-gradient(#7DACDB, #6699CC);
-	color: #FFFFFF;
+	background: rgba(0,0,0,0.2);
+	color: #bbb;
 	bottom: 0px;
-	padding: 10px 0px 0px 15px;
+	padding: 10px 0 20px;
     cursor: default;
     text-align: center;
-    border-top:1px solid #6190BF;
+    box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0px -1px 5px #000;
+	color: #ddd;
+	text-shadow: 0 2px 2px #000;
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px;
 }
 #clock-time {
 	font-family: 'TrendexLightSSi.ttf';
 	display: block;
-	font-size: 24pt;
+	font-size: 50px;
+	text-shadow: 0 2px 2px #000;
 }
 #clock-date {
 	font-size: 15px;
 	font-family: 'Aurulent Sans';
+	text-shadow: 0 2px 2px #000;
 }
-/* ------------------------------------------- */
+
+/* -------------------
+ * ------------------- */
 #mocp {
 	margin-top: 25px;
 	font-size: 14px;
 	font-family: 'Aurulent Sans';
 	text-align:center;
-	color:#1a1a1a;
+	text-shadow: 0 2px 2px #000;
+	color:#ddd;
 }
 .mocp {
 	width:100%;
@@ -128,37 +147,51 @@
 	display: inline-block;
 	overflow-y:auto;
 	padding:5px 18px 5px 0px;
+	box-shadow: 0 1px 0 rgba(255,255,255,.05) inset;
+	background: transaprent;
+}
+.mocp #title{
+	height:20px;
+
 }
 .mocp img {
 	width: 26px;
 	height: 26px;
 	margin: 0;
-	padding: 2px;
+	padding: 5px;
 	cursor:pointer;
+	border-radius: 50px;
+	-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+	background:rgba(0,0,0,0.2);
 }
 .mocp li {
 	text-decoration:none;
 	display: inline-block;
-	padding:5px;
+	padding:2px;
 	margin: 1px;
 	text-align:center;
 	cursor:pointer;
-	border-radius:5px;
-	background-image: -webkit-linear-gradient(#F5F5F5, #D7D7D7);
-	border: 1px solid #C8C8C8;
-	box-shadow:0 1px 1px rgba(0,0,0,0.3);
 }
-.mocp li:hover,
-.mocp .selected{
-	background-image: -webkit-linear-gradient(#7DACDB, #6699CC);
-	border: 1px solid #6395C7;
+.mocp li:hover img,
+.mocp .selected img{
+	background-color: rgba(0,0,0,0.8);
+	-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
 	-webkit-transition: all 0.2s ease-in-out;
 }
-.mocp li:focus,
-.mocp .selected{
-	box-shadow:inset 0px 3px 2px rgba(0,0,0,0.3),0px 1px 0px rgba(255,255,255,0.2);
-}
 
+
+.header{
+	width:100%;
+	color: #ddd;
+    vertical-align:middle;
+    box-shadow: 0 1px 0 rgba(255,255,255,.1) inset;
+    text-shadow: 0 2px 2px #000;
+    background: rgba(0,0,0,0.2);
+    border-bottom:1px solid #111;
+    padding:5px 0px 5px 0px;
+}
 
 /***********************************
  * Fonts Collections *
