@@ -1,0 +1,11 @@
+		EmbunV1
+tema Manokwari ini dibuat oleh:
+	      Heru Setiawan 
+	  (kaeruz.deviantart.com)
+
+____________________________________________________________________________________________
+
+
+Apa Yang kurang nyaman?
+  - Transisi header menu masih belum sempurna
+  - Text-overflow aplikasi belum berjalan baik

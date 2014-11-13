@@ -27,7 +27,7 @@ function install {
 	echo "List of avaiable theme"
 	echo ""
 
-	FILE=($(ls theme/ | grep manokwari))
+	FILE=($(ls theme/))
 
 	for i in ${FILE[*]}; do
 		echo " $(($COUNT+1)) $i"

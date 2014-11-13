@@ -1,0 +1,190 @@
+#bevel {
+    background: #D4D4D4;
+    border-left: 1px solid #BFBFBF;
+    height: 100%;
+    width: 260px;
+    overflow-x: hidden;
+    overflow-y: auto;
+	right:-259px;
+    top: 0px;
+    position:fixed;
+    z-index: 150;
+    -webkit-transition: right 200ms ease-in-out;
+}
+#bevel:hover {
+	right: 0px;
+}
+#sosmed {
+	margin-top: 35px;
+	color:#1a1a1a;
+	font-size: 14px;
+	font-family: 'Aurulent Sans';
+	text-align:center;
+	cursor:default;
+}
+.sosmed {
+	width:auto;
+	height: auto;
+	margin-top:8px;
+	font-family: 'Aurulent Sans';
+	text-align:center;
+	overflow-y:auto;
+	padding:5px;
+}
+.sosmed img {
+	width:28px;
+	height:28px;
+}
+.sosmed li {
+	text-decoration:none;
+	display: inline-block;
+	padding:2px;
+	margin: 1px;
+	text-align:center;
+	cursor:pointer;
+}
+.sosmed li:hover{
+	-webkit-transform:scale(1.2);	
+	-webkit-transition: all 0.2s ease-in-out;	
+}
+
+#system_settings {
+	margin-top: 35px;
+	color:#1a1a1a;
+	font-size: 14px;
+	font-family: 'Aurulent Sans';
+	text-align:center;
+	cursor:default;
+}
+.system {
+	width:auto;
+	height: auto;
+	margin-top:8px;
+	font-family: 'Aurulent Sans';
+	text-align:center;
+	overflow-y:auto;
+}
+.system img {
+	width:28px;
+	height:28px;
+	margin-bottom: 5px;
+}
+.system span {
+	font-size: 12px;
+	color:#1a1a1a;
+	text-align:center;
+}
+.system li {
+	text-decoration:none;
+	display: inline-block;
+	width: 55px;
+	height: 50px;
+	margin: 1px;
+	padding: 2px 10px;
+	text-align:center;
+	cursor:pointer;
+	border-radius:5px;
+	
+}
+.system li:hover{
+	background-image: -webkit-linear-gradient(#7DACDB, #6699CC);
+	color:#1a1a1a;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+#time {
+	width: 260px;
+	height: 60px;
+	position: absolute;
+	background-image: -webkit-linear-gradient(#7DACDB, #6699CC);
+	color: #FFFFFF;
+	bottom: 0px;
+	padding: 10px 0px 0px 15px;
+    cursor: default;
+    text-align: center;
+    border-top:1px solid #6190BF;
+}
+#clock-time {
+	font-family: 'TrendexLightSSi.ttf';
+	display: block;
+	font-size: 24pt;
+}
+#clock-date {
+	font-size: 15px;
+	font-family: 'Aurulent Sans';
+}
+/* ------------------------------------------- */
+#mocp {
+	margin-top: 25px;
+	font-size: 14px;
+	font-family: 'Aurulent Sans';
+	text-align:center;
+	color:#1a1a1a;
+}
+.mocp {
+	width:100%;
+	height: auto;
+	margin-top:0px;
+	font-family: 'Aurulent Sans';
+	display: inline-block;
+	overflow-y:auto;
+	padding:5px 18px 5px 0px;
+}
+.mocp img {
+	width: 26px;
+	height: 26px;
+	margin: 0;
+	padding: 2px;
+	cursor:pointer;
+}
+.mocp li {
+	text-decoration:none;
+	display: inline-block;
+	padding:5px;
+	margin: 1px;
+	text-align:center;
+	cursor:pointer;
+	border-radius:5px;
+	background-image: -webkit-linear-gradient(#F5F5F5, #D7D7D7);
+	border: 1px solid #C8C8C8;
+	box-shadow:0 1px 1px rgba(0,0,0,0.3);
+}
+.mocp li:hover,
+.mocp .selected{
+	background-image: -webkit-linear-gradient(#7DACDB, #6699CC);
+	border: 1px solid #6395C7;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+.mocp li:focus,
+.mocp .selected{
+	box-shadow:inset 0px 3px 2px rgba(0,0,0,0.3),0px 1px 0px rgba(255,255,255,0.2);
+}
+
+
+/***********************************
+ * Fonts Collections *
+ * *********************************/
+@font-face {
+    font-family: 'Arimo Bold';
+    src: url(../fonts/Arimo-Bold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Arimo Regular';
+    src: url(../fonts/Arimo-Regular.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'TrendexLightSSi.ttf';
+    src: url(../fonts/TrendexLightSSi.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'OpenSans Light';
+    src: url(../fonts/OpenSans-Light.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Aurulent Sans';
+    src: url(../fonts/AurulentSans-Regular.otf);
+    font-weight: 600;
+}
