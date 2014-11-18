@@ -1,0 +1,53 @@
+
+/*  session */
+#listGeneral {
+    margin:50px auto 0 auto;
+    text-align:center;
+}
+#listGeneral .ui-listview-item {
+    color: #4d4d4d; font-size: 20px; text-align:center;
+    margin:1px;
+    display: inline-block;
+    cursor: pointer; width: 20px; height: auto;
+    -webkit-transition: color 0.4s;
+    text-shadow:none;
+    background:rgba(255,255,255,0.2);
+	border: 1px solid #afafaf;
+	height:20px;
+	padding:6px;
+}
+
+#listGeneral .ui-listview-item:hover{
+    background:#2099d6;
+	border: 1px solid #2180AF;
+}
+#listGeneral .ui-listview-item:active,
+#listGeneral .ui-listview-item:focus {
+	box-shadow:inset 0px 3px 0px rgba(0,0,0,0.2);
+}
+#listGeneral h2,
+#listGeneral span {
+	display:none;
+	color: #2c2c2c;
+	padding: 4px;
+}
+#listGeneral .ui-listview-item:hover h2,
+#listGeneral .ui-listview-item:hover span{
+	color:#4d4d4d;
+	content:"";
+	display:block;
+	position:fixed;
+	font-family: Cantarell;
+	text-align:left;
+	left:10px;
+}
+#listGeneral .ui-listview-item:hover h2 {
+	margin: 10px 0 0;
+	font-size:12pt;
+	
+}
+#listGeneral .ui-listview-item:hover span {
+	margin: 30px 0 0;
+	font-size:11pt;
+}
+
