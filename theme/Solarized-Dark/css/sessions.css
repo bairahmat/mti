@@ -7,13 +7,12 @@
     padding:0;
 }
 #listGeneral .ui-listview-item {
-    color: #fff; font-size: 20px; text-align:center;
+    color: #FFFFFF; font-size: 20px; text-align:center;
     margin:0 -4px 0 0 ;
     display: inline-block;
     cursor: pointer; width: 20px; height: auto;
     -webkit-transition: all 0.2s ease-out;
-    text-shadow:none;
-    background:#131313;
+    background:#022C37;
 	border: none;
 	height:20px;
 	padding:8px;
@@ -21,7 +20,7 @@
 }
 
 #listGeneral .ui-listview-item:hover{
-    background:#2099d6;
+    background:#025a6f;
 }
 #listGeneral .ui-listview-item:active,
 #listGeneral .ui-listview-item:focus {
@@ -30,7 +29,7 @@
 #listGeneral h2,
 #listGeneral span {
 	display:none;
-	color: #ffffff;
+	color: #FFFFFF;
 	padding: 4px;
 }
 #listGeneral .ui-listview-item:hover h2,
