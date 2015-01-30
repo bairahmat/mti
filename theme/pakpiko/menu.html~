@@ -1,0 +1,137 @@
+<html>                                                                  
+<head>                                                                  
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="stylesheet" href="style.css" />
+
+<script type="text/javascript" src="jq.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+  <style>
+    body {
+      background:#fff
+      font-size:13px;
+    }
+    #wrap {
+      position:relative;
+      width:220px;
+      margin:50px auto 0;
+    }
+    #header{position:relative;line-height:1em;}
+    .filterform {
+      width:220px;
+      font-size:12px;
+      display:block;
+    }
+    .filterform input {
+      -moz-border-radius:5px;
+      border-radius:5px;
+      -webkit-border-radius:5px;
+    }
+   </style>
+
+  <script>
+
+(function ($) {
+  // custom css expression for a case-insensitive contains()
+  jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+  };
+
+
+  function listFilter(header, list) { // header is any element, list is an unordered list
+    // create and add the filter form to the header
+    var form = $("<form>").attr({"class":"filterform","action":"#","style":"text-align:center"}),
+        input = $("<input>").attr({"class":"filterinput","type":"text","id":"searchinput","style":"text-align:center"});
+    $(form).append(input).appendTo(header);
+
+    $(input)
+      .change( function () {
+        var filter = $(this).val();
+        if(filter) {
+          // this finds all links in a list that contain the input,
+          // and hide the ones not containing the input while showing the ones that do
+          $(list).find("a:not(:Contains(" + filter + "))").parent().slideUp();
+          $(list).find("a:Contains(" + filter + ")").parent().slideDown();
+        } else {
+          $(list).find("li").slideDown();
+        }
+        return false;
+      })
+    .keyup( function () {
+        // fire the above change event after every letter
+        $(this).change();
+    });
+  }
+
+
+  //ondomready
+  $(function () {
+    listFilter($("#header"), $("#listApplications1"));
+  });
+}(jQuery));
+  </script>
+		<script>
+function searchValue() { 
+		document.getElementById('searchinput').value = 'Search here...';
+		document.getElementById("searchinput").select();
+		}
+		</script>
+</head>                                                                 
+<body>                                                                  
+    <div id="userAccount">
+        <img src="/usr/share/icons/gnome/48x48/status/avatar-default.png"/>
+    <h1>Username</h1>
+	<span translate="no">Hostname</span>
+	</div>
+
+	<div data-role="page" id="first">
+		<div data-role="header">
+		<span>Manokwari</span>
+	</div><!-- /header -->
+	<div data-role="content">
+<div data-role="listview" id="listGeneral1" data-inset="true">
+		<!--div data-role="header"><span>Places and System</span></div-->
+
+		<a href="#locations" data-transition="slide" id="btn-locations" onclick="searchValue()"><span>Search</span><div class="ui-search-icon"></div></a>
+
+	</div>
+		
+		<div id="listApplications" data-role="collapsible-set"></div>
+	<div data-role="listview" id="listGeneral" data-inset="true">
+		<!--div data-role="header"><span>Places and System</span></div-->
+		<!--<a href="#locations" data-transition="slide" id="btn-locations"><span>Locations</span><div class="ui-expandable-icon"></div></a>-->
+		<a href="#" data-tap-handler="handleSettings"><span>Settings</span></a>
+		<a href="#" data-tap-handler="handleLockScreen"><span>Lock Screen</span></a>	
+		<a href="#" data-tap-handler="handleLogOut"><span>Log Out</span></a>
+		<a href="#" data-visibility="shutdownEnabled" data-tap-handler="handleShutDown"><span>Shut Down</span></a>
+	</div>
+	</div><!-- /content -->
+	</div><!-- /page -->
+
+	<div data-role="page" id="locations">
+		<div data-role="header" data-add-back-btn="true">
+		<span>Search</span>
+	</div><!-- /header -->
+	<div data-role="content">   
+		  <h4 id="header"></h4>
+		<div id="listApplications1" data-role="listview-no-parent"></div>
+<br><br>
+		  <h3 id="header" style="text-align:center">Places</h3>
+	<div data-role="listview" id="listPlaces" data-inset="true">
+
+  	</div><!-- /content -->
+	</div><!-- /page -->
+
+
+
+
+	<div id="popup-pool">
+	<div data-role="popup" id="add_to_fav_or_desktop">
+		<a id="add_to_desktop" href="#" data-role="button" data-rel="back"><span>Add to Desktop</span></a>
+	</div>
+
+	<div data-role="popup" id="remove_from_favorites">
+		<a id="remove_from_favorites_button" href="#" data-role="button" data-rel="back"><span>Remove from Favorites</span></a>
+	</div>
+	</div>
+</body>                                                                 
+</html>
