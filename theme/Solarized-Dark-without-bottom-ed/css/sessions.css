@@ -1,0 +1,66 @@
+
+/*  session */
+#listGeneral {
+    margin:50px auto 0 auto;
+    text-align:center;
+    height:36px;
+    padding:0;
+}
+#listGeneral .ui-listview-item {
+    color: #FFFFFF; font-size: 20px; text-align:center;
+    margin:0 -4px 0 0 ;
+    display: inline-block;
+    cursor: pointer; width: 20px; height: auto;
+    -webkit-transition: all 0.2s ease-out;
+    background:#022C37;
+	border: none;
+	height:20px;
+	padding:8px;
+	border-radius:0;
+}
+
+#listGeneral .ui-listview-item:hover{
+    background:#025a6f;
+}
+#listGeneral .ui-listview-item:active,
+#listGeneral .ui-listview-item:focus {
+	box-shadow:inset 0px 3px 0px rgba(0,0,0,0.2);
+}
+#listGeneral h2,
+#listGeneral span {
+	display:none;
+	color: #FFFFFF;
+	padding: 4px;
+}
+#listGeneral .ui-listview-item:hover h2,
+#listGeneral .ui-listview-item:hover span{
+	content:"";
+	display:block;
+	position:fixed;
+	font-family: Cantarell;
+	text-align:center;
+	left:10px;
+	 -webkit-transition: all 0.2s ease-in-out;
+}
+#listGeneral .ui-listview-item:hover h2 {
+	margin: 15px 0 0;
+	font-size:12pt;
+	
+}
+#listGeneral .ui-listview-item:hover span {
+	margin: 35px 0 0;
+	font-size:11pt;
+}
+#listGeneral  .ui-listview-first-child {
+/*
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+*/
+}
+
+#listGeneral  .ui-listview-last-child {
+/*
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+*/
+}
