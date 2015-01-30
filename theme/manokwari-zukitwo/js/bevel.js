@@ -10,55 +10,6 @@ function RunFacebook() {
 function RunTwitter() {
 	Utils.run_command("exo-open --launch WebBrowser %u https://twitter.com/");
 }
-//mocp
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
-function MocpStart(){
-	Utils.run_command("mocp -S");
-	Utils.run_command("mocp -u s");
-	Utils.run_command("mocp -u r");
-}
-function MocpTitle(){
-	sleep(100);
-	Utils.run_command("mocptitle");
-}
-
-function MocpBackward(){Utils.run_command("mocp -r");MocpTitle();}
-function MocpPause(){Utils.run_command("mocp -G");MocpTitle();}
-function MocpPlay(){
-	if(Utils.run_command("mocp") == false){
-		Utils.run_command("mocp");
-		Utils.run_command("mocp -p");
-	}
-	else{Utils.run_command("mocp -p");}
-	
-	MocpTitle();
-}
-function MocpStop(){Utils.run_command("mocp -s");sleep(1);MocpTitle();}
-function MocpForward(){Utils.run_command("mocp -f");sleep(1);MocpTitle();}
-function MocpRepeat(){Utils.run_command("mocp -t r");}
-function MocpShuffle(){Utils.run_command("mocp -t s");}
-function MocpOpen(){Utils.run_command("gnome-terminal -e mocp");}
-
-$(document).ready(function() {
-	$('#mocp').on('click', '#repeat', function(){
-		if($('#repeat').hasClass("selected")){ $('#repeat').removeClass("selected");}
-		else{$('#repeat').addClass("selected");}
-	});
-	$('#mocp').on('click', '#shuffle', function(){
-		if($('#shuffle').hasClass("selected")){ $('#shuffle').removeClass("selected");}
-		else{$('#shuffle').addClass("selected");}
-	});
-	
-});
-
-
 
 // gnome control center
 
@@ -107,3 +58,99 @@ function RunPrinter() {
 function RunShare() {
 	Utils.run_command("gnome-control-center sharing");
 }
+
+//mocp
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+function MocpStart(){
+	Utils.run_command("mocp -S");
+	Utils.run_command("mocp -u s");
+	Utils.run_command("mocp -u r");
+}
+function MocpTitle(){
+	Utils.run_command("mocptitle");	
+	sleep(100);
+}
+function MocpStatus($A){
+	Utils.run_command("notify-send --icon=audio-x-generic --expire-time=3000 'Music on Console' '"+$A+"'");
+}
+
+function MocpBackward(){Utils.run_command("mocp -r");sleep(100);MocpTitle();}
+function MocpPause(){Utils.run_command("mocp -G");MocpStatus("PAUSE");}
+function MocpPlay(){
+	if(Utils.run_command("mocp -S") == false){
+		Utils.run_command("mocp -S");
+		Utils.run_command("mocp -p");
+	}
+	else{Utils.run_command("mocp -p");}
+	
+	MocpTitle();
+}
+function MocpStop(){Utils.run_command("mocp -s");sleep(1);MocpStatus("STOP");}
+function MocpForward(){Utils.run_command("mocp -f");sleep(100);MocpTitle();}
+function MocpRepeat(){Utils.run_command("mocp -t r");}
+function MocpShuffle(){Utils.run_command("mocp -t s");}
+function MocpOpen(){Utils.run_command("gnome-terminal -e mocp");}
+
+$(document).ready(function() {
+	$('#repeat').click(function(){
+		if($('#repeat').hasClass("selected")){ $('#repeat').removeClass("selected");}
+		else{$('#repeat').addClass("selected");}
+	});
+	$('#shuffle').click(function(){
+		if($('#shuffle').hasClass("selected")){ $('#shuffle').removeClass("selected");}
+		else{$('#shuffle').addClass("selected");}
+	});
+	$('#pause').click(function(){
+		if($('#pause').hasClass("selected")){ $('#pause').removeClass("selected");}
+		else{$('#pause').addClass("selected");}
+	});
+	
+	// Hide menu
+	var $zindex = 0;
+	$('#thumb-1').click(function() {
+		var $menu = $('#mocp');
+			if ($menu.is(':visible')) {
+				$menu.animate({top: -($menu.outerHeight() + 10)}, function() {
+					$menu.hide();
+					});
+			}
+			else {
+				$zindex=$zindex + 1;
+				$menu.show().css("z-index",$zindex);
+				$menu.show().css("top", -($menu.outerHeight() + 10)).animate({top: 24});
+			}
+	});
+	$('#thumb-2').click(function() {
+		var $menu = $('#system_settings');
+            if ($menu.is(':visible')) {
+                $menu.animate({right: -($menu.outerWidth() + 10)}, function() {
+                    $menu.hide();
+                });
+            }
+            else {
+				$zindex=$zindex + 1;
+				$menu.show().css("z-index",$zindex);
+				$menu.show().css("right", -($menu.outerWidth() + 10)).animate({right: 30});
+			}
+	});
+	$('#thumb-3').click(function() {
+		var $menu = $('#sosmed');
+            if ($menu.is(':visible')) {
+                $menu.animate({right: -($menu.outerWidth() + 10)}, function() {
+                    $menu.hide();
+                });
+            }
+            else {
+				$zindex=$zindex + 1;
+				$menu.show().css("z-index",$zindex);
+				$menu.show().css("right", -($menu.outerWidth() + 10)).animate({right: 30});
+			}
+	});
+});

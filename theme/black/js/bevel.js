@@ -81,7 +81,7 @@ function MocpStatus($A){
 	Utils.run_command("notify-send --icon=audio-x-generic --expire-time=3000 'Music on Console' '"+$A+"'");
 }
 
-function MocpBackward(){Utils.run_command("mocp -r");MocpTitle();}
+function MocpBackward(){Utils.run_command("mocp -r");sleep(100);MocpTitle();}
 function MocpPause(){Utils.run_command("mocp -G");MocpStatus("PAUSE");}
 function MocpPlay(){
 	if(Utils.run_command("mocp -S") == false){
@@ -93,7 +93,7 @@ function MocpPlay(){
 	MocpTitle();
 }
 function MocpStop(){Utils.run_command("mocp -s");sleep(1);MocpStatus("STOP");}
-function MocpForward(){Utils.run_command("mocp -f");sleep(1);MocpTitle();}
+function MocpForward(){Utils.run_command("mocp -f");sleep(100);MocpTitle();}
 function MocpRepeat(){Utils.run_command("mocp -t r");}
 function MocpShuffle(){Utils.run_command("mocp -t s");}
 function MocpOpen(){Utils.run_command("gnome-terminal -e mocp");}
