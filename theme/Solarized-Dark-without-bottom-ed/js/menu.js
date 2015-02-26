@@ -389,6 +389,7 @@ var menu = (function() {
         var xdg = new MenuList(dataApplications);
         xdg.type = "collapsible";
         xdg.attach("listApplications");
+        xdg.attach("listApplications1");
 
 
         var places = new MenuList(dataPlaces);

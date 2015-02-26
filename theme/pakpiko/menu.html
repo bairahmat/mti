@@ -49,23 +49,33 @@
         input = $("<input>").attr({"class":"filterinput","type":"text","id":"searchinput","placeholder":"Search"});
     $(form).append(input).appendTo(header);
 
-    $(input)
-	  .click( function(){
-		$(this).val("");
-	   })
-      .keyup( function () {
-        var filter = $(this).val();
-        if(filter) {
-          // this finds all links in a list that contain the input,
-          // and hide the ones not containing the input while showing the ones that do
-			$(list).find("a:not(:Contains(" + filter + "))").parent().fadeOut();
-			$(list).find("a:Contains(" + filter + ")").parent().fadeIn();
-          
-        } else {
-          $(list).find("li").fadeOut();
-        }
-        return false;
-      });
+     $(input)
+		.click( function(){
+			$(this).val("");
+			$("li").slideDown();
+		})
+		.keyup( function () {
+			var filter = $(this).val();
+			if(filter) {
+				// this finds all links in a list that contain the input,
+				// and hide the ones not containing the input while showing the ones that do
+				$(list).find("a:not(:Contains(" + filter + "))").parent().slideUp();	
+				$(list).find("li:not(:Contains(" + filter + "))").slideUp();	
+				$(list).find("a:Contains(" + filter + ")").parent().slideDown();
+				$(list).find("li:Contains(" + filter + ")").slideDown();
+				$(list).show();
+			} 
+			else if(filter==""){
+				$(list).find("li").slideDown().show();
+			}
+			else{
+				$(list).hide();
+			}
+			return false;
+		})
+		.focusout(function(){
+			$("li").slideDown();
+		});
   }
 
 
