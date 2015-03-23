@@ -81,7 +81,7 @@ html {
     cursor: pointer;padding-bottom: 25px;
     margin: 0;
     background:transparent;
-    border-radius:5px;
+    border-radius:3px;
     -webkit-transition: all 0.2s ease-in-out;
     
 }
@@ -139,8 +139,8 @@ span {
     display: block;
     color: #2c2c2c;
     cursor: pointer;
-    background: -webkit-linear-gradient(#F4F4F4,#E2E3E5);
-    text-shadow: 0 1px 1px #fff;
+    background: #F4F4F4;
+    text-shadow:0 1px 0px #fff;
     -webkit-transition:padding-left 0.3s,background 0.2s ease-out;
     border-top:1px solid #fff;
     border-bottom:1px solid #afafaf;
@@ -150,13 +150,21 @@ span {
 }
 
 
-.ui-collapsible-header:hover, .ui-collapsible-header:active {
-    color: #fff; padding-left: 30px;
+.ui-collapsible-header:hover{
+    color: #fff;
+    padding-left: 30px;
     text-shadow: 0 1px 1px #222;
-    background:#4080FB;
+    background:-webkit-linear-gradient(#4080FB,#6096FF);
     border:1px solid #4080FB;
 }
-
+.ui-collapsible-header:active,
+.ui-collapsible-header:focus{
+	background:#4D4D4D;
+	border:1px solid #4D4D4D;
+	color:#fff;
+	text-shadow:0 1px 1px #000;
+	box-shadow:inset 0px 3px 4px rgba(0,0,0,0.2);
+}
 .ui-collapsible-header-top {
 	border-top:1px solid #afafaf;
 	border-top-left-radius:2px;

@@ -74,7 +74,7 @@
 	cursor:pointer;
 }
 .sosmed li:hover{
-	-webkit-transform:scale(1.2);	
+	-webkit-transform:scale(1.1);	
 	-webkit-transition: all 0.2s ease-in-out;	
 }
 
@@ -117,15 +117,20 @@
 	text-align:center;
 	cursor:pointer;
 	-webkit-transition: all 0.2s ease-in-out;
-	border-radius:5px;	
-	border: 1px solid #BFBFBF;
-	background: -webkit-linear-gradient(#F4F4F4,#E2E3E5);
+	border-radius:3px;	
+	background:#F4F4F4;
+	border: 1px solid #afafaf;
 }
 .system li:hover{
-	background:-webkit-linear-gradient(#4080FB,#5992FF);
+	background:-webkit-linear-gradient(#4080FB,#6096FF);
 	border: 1px solid #4080FB;
-	color:#4D4D4D;
-	
+	color:#4D4D4D;	
+}
+.system li:focus,
+.system li:active{
+	box-shadow:inset 0px 3px 4px rgba(0,0,0,0.2);
+	background:#7F7F7F;
+	border:1px solid #4D4D4D;
 }
 #time {
 	width: auto;
@@ -189,17 +194,21 @@
 	cursor:pointer;
 	border: 1px solid #BFBFBF;
 	border-radius:50px;
-	background: -webkit-linear-gradient(#F4F4F4,#E2E3E5);
+	background:#F4F4F4;
+	border: 1px solid #afafaf;
 }
 .mocp li:hover,
 .mocp .selected{
-	background:-webkit-linear-gradient(#4080FB,#5992FF);
+	background:-webkit-linear-gradient(#4080FB,#6096FF);
 	border: 1px solid #4080FB;
 	-webkit-transition: all 0.2s ease-in-out;
 }
 .mocp li:focus,
+.mocp li:active,
 .mocp .selected{
-	-webkit-box-shadow:inset 0px 3px 0px rgba(0,0,0,0.2);
+	box-shadow:inset 0px 3px 4px rgba(0,0,0,0.2);
+	background:#7F7F7F;
+	border:1px solid #4D4D4D;
 }
 .big img{
 	width:50px;height:50px;

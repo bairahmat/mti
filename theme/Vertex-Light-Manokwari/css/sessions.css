@@ -11,19 +11,22 @@
     cursor: pointer; width: 20px; height: auto;
     -webkit-transition: color 0.4s;
     text-shadow:none;
-    background: -webkit-linear-gradient(#F4F4F4,#E2E3E5);
+   background:#F4F4F4;
 	border: 1px solid #afafaf;
 	height:20px;
 	padding:6px;
 	border-radius:0px;
+	text-shadow:0 1px 0px #fff;
 }
 
 #listGeneral .ui-listview-item:hover{
-    background:-webkit-linear-gradient(#4080FB,#5992FF);
-	border: 1px solid #4080FB;
+   background:-webkit-linear-gradient(#4080FB,#6096FF);
 }
 #listGeneral .ui-listview-item:active,
 #listGeneral .ui-listview-item:focus {
+	background:#4D4D4D;
+	color:#fff;
+	text-shadow:0 1px 1px #000;
 	box-shadow:inset 0px 3px 4px rgba(0,0,0,0.2);
 }
 #listGeneral h2,
@@ -53,3 +56,12 @@
 	font-size:11pt;
 }
 
+#listGeneral  .ui-listview-first-child {
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+#listGeneral  .ui-listview-last-child {
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+}

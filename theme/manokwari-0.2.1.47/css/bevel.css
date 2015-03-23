@@ -1,0 +1,172 @@
+#bevel {
+    background: #111;
+    border-left: 1px solid #000;
+    height: 100%;
+    width: 260px;
+    overflow-x: hidden;
+    overflow-y: auto;
+	right:-259px;
+    top: 0px;
+    bottom:0px;
+    position:absolute;
+    z-index: 150;
+    -webkit-transition: right 300ms ease-in-out;
+}
+#bevel:hover {
+	right: 0px;
+}
+#sosmed {
+	position: relative;
+	top: 42px;
+	width:auto;
+	height:auto;
+	margin: 0 5px;
+	padding-bottom: 20px;
+}
+#sosmed a {
+	display:block;
+	margin: 1px;
+	padding: 9px 5px 8px 8px;
+	background: #1a1a1a;
+	color: #aaa;
+	font-size: 12px;
+	font-family: 'Aurulent Sans';
+	text-decoration: none;
+	cursor:pointer;
+}
+#sosmed a:hover {
+	color: #eee;
+	background: #222;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+#sosmed img {
+	width:20px;
+	height:20px;
+	padding-right: 6px;
+	margin: -3px 0 5px 0;
+	float: left;
+}
+#system_settings {
+	margin-top: 35px;
+	color:#ccc;
+	font-size: 14px;
+	font-family: 'Aurulent Sans';
+	text-align:center;
+	text-shadow: 0 1px 1px #000;
+	cursor:default;
+}
+.system {
+	width:auto;
+	height: auto;
+	margin-top:8px;
+	font-family: 'Aurulent Sans';
+	text-align:center;
+	overflow-y:auto;
+}
+.system img {
+	width:28px;
+	height:28px;
+	margin-bottom: 4px;
+}
+.system span {
+	font-size: 12px;
+	color:#888;
+	text-align:center;
+}
+.system li {
+	text-decoration:none;
+	display: inline-block;
+	width: 55px;
+	height: 45px;
+	margin: 0px;
+	padding: 5px 10px;
+	text-align:center;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	cursor:pointer;
+	opacity: 0.85;
+}
+.system li:hover {
+    background-color: #222;
+	opacity: 1;
+	color: #eee;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+#time {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	background: #1a1a1a;
+	color: #bbb;
+	bottom: 0px;
+	padding: 10px 0 15px;
+    cursor: default;
+    text-align: center;
+}
+#clock-time {
+	font-family: 'TrendexLightSSi.ttf';
+	display: block;
+	font-size: 42px;
+	text-shadow: 0 2px 2px #000;
+}
+#clock-date {
+	font-size: 14px;
+	font-family: 'Aurulent Sans';
+	text-shadow: 0 2px 2px #000;
+}
+
+#mocp {
+	margin-top: 10px;
+	font-size: 12px;
+	font-family: 'Aurulent Sans';
+	text-align:center;
+	text-shadow: 0 2px 2px #000;
+	color: #ccc;
+}
+.mocp {
+	width:auto;
+	height: auto;
+	font-family: 'Aurulent Sans';
+	display: inline-block;
+	overflow-y:auto;
+	padding-top: 5px;
+}
+.mocp img {
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	padding: 5px 12px;
+	cursor:pointer;
+	border-radius: 50px;
+	background-color: #333;
+}
+.mocp li {
+	text-decoration:none;
+	display: inline-block;
+	padding:2px;
+	margin: 1px;
+	text-align:center;
+	cursor:pointer;
+}
+.mocp title {
+	font-size:10px;
+}
+.mocp li:hover img,
+.mocp .selected img{
+	background-color: #444;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+/***********************************
+ * Fonts Collections *
+ * *********************************/
+@font-face {
+    font-family: 'TrendexLightSSi.ttf';
+    src: url(../fonts/TrendexLightSSi.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Aurulent Sans';
+    src: url(../fonts/AurulentSans-Regular.otf);
+    font-weight: 600;
+}

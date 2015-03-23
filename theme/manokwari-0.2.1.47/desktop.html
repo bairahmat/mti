@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="stylesheet" href="css/desktop.css" />
+<link rel="stylesheet" href="css/bevel.css" />
+
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/xml2json.js"></script>
+<script type="text/javascript" src="js/xml-background.js"></script>
+<script type="text/javascript" src="js/desktop.js"></script>
+<!--extra-->
+<script type="text/javascript" src="js/time.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bevel.js"></script>
+
+</head>
+<body>
+  <div id="overlay"></div>
+  <div id="bg"></div>
+  <div id="base">
+    <!-- h1 id="debug"></h1 -->
+	<div id="launcher"></div>
+
+  <div id="bevel">
+	<div id="sosmed">
+		<a href="#" value="Sosmed1" onclick="Run1();">BlankOn Linux<img src="./img/blankon.svg"></a>
+		<a href="#" value="Sosmed2" onclick="Run2();">BlankOn Tutorial<img src="./img/blankon-tutorial.svg"></a>
+		<a href="#" value="Sosmed3" onclick="Run3();">Facebook<img src="./img/facebook.svg"></a>
+		<a href="#" value="Sosmed4" onclick="Run4();">Twitter<img src="./img/twitter.svg"></a>
+	</div>
+	<div id="system_settings">
+		<span>System Settings</span>
+	<div class="system">
+		<li href="#" value="" onclick="RunWallpaper()"><img src="./icons/personalization_normal.png"><span>Wallpaper</span></li>
+		<li href="#" value="" onclick="RunAccount()"><img src="./icons/account_normal.png"><span>Account</span></li>
+		<li href="#" value="" onclick="RunDate()"><img src="./icons/date_time_normal.png"><span>Date/Time</span></li>
+		<li href="#" value="" onclick="RunOnline()"><img src="./icons/default_applications_normal.png"><span>Online</span></li>
+		<li href="#" value="" onclick="RunRegional()"><img src="./icons/network_normal.png"><span>Regional</span></li>
+		<li href="#" value="" onclick="RunDisplay()"><img src="./icons/display_normal.png"><span>Display</span></li>
+		<li href="#" value="" onclick="RunNetwork()"><img src="./icons/wireless.png"><span>Network</span></li>
+		<li href="#" value="" onclick="RunKeyboard()"><img src="./icons/keyboard_normal.png"><span>Keyboard</span></li>
+		<li href="#" value="" onclick="RunMouse()"><img src="./icons/mouse_normal.png"><span>Mouse</span></li>
+		<li href="#" value="" onclick="RunSound()"><img src="./icons/sound_normal.png"><span>Sound</span></li>
+		<li href="#" value="" onclick="RunBluetooth()"><img src="./icons/bluetooth_normal.png"><span>Bluetooth</span></li>
+		<li href="#" value="" onclick="RunPower()"><img src="./icons/power_normal.png"><span>Power</span></li>
+		<li href="#" value="" onclick="RunInfo()"><img src="./icons/system_info_normal.png"><span>Detail</span></li>
+		<li href="#" value="" onclick="RunPrinter()"><img src="./icons/printer.png"><span>Printer</span></li>
+		<li href="#" value="" onclick="RunShare()"><img src="./icons/share.png"><span>Sharing</span></li>
+	</div>
+	<div id="mocp">
+		<div class="header"></div>
+		<a href="#" value="" onclick="MocpOpen();" title="Open Audacious"><img src="img/audacious.png" style="height: 32px; width: 148px; padding-top:6px; opacity: 0.8;"></a>
+		</div>
+		<div class="mocp">
+		<li href="#" value="" onclick="MocpBackward();" title="Backward"><img src="icons/media-backward.svg"></li>
+		<li href="#" value="" onclick="MocpPause();" title="Pause"><img src="icons/media-pause.svg"></li>
+		<li href="#" value="" onclick="MocpPlay();" title="Play"><img src="icons/media-play.svg"></li>
+		<li href="#" value="" onclick="MocpForward();" title="Forward"><img src="icons/media-forward.svg"></li>
+		
+	</div>
+	<div id="time" class="clock"><span id="clock-time">00:00</span><span id="clock-date">16 Juli 2013</span>
+	</div><!--Hover-->
+</body>
+</html>
