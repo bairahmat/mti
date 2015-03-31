@@ -1,0 +1,76 @@
+#!/bin/bash
+PWD=($(pwd))
+#SISTEM="/usr/lib/manokwari/system"
+SISTEM="$PWD/test/system"
+TEMA="$PWD/theme/"
+KOMAN="$1"
+NAMA="$2"
+OPSI="$3"
+
+
+function tema {
+  ls "$PWD/theme"
+}
+function lihat {
+  eog "$PWD/theme/$NAMA/"
+}
+function pasang {
+  #cd "$SISTEM"
+  if [  -d "$PWD/theme/$NAMA" ]; then
+    case $OPSI in
+        -b)
+          backup;;
+    esac
+
+    rm -rf "$SISTEM"
+    echo "Memasang Tema $NAMA"
+    ln -s $PWD/theme/$NAMA $SISTEM
+   # killall manokwari
+  else
+    echo "Pasang: $NAMA: tidak ada berkas"
+  fi
+}
+function backup {
+  if [ ! -d "$PWD/backup" ]; then
+    mkdir "$PWD/backup"
+  fi
+
+  a="`date '+%F-%H-%M-%S'`"
+  b="$PWD/backup/$a"
+  mkdir $b
+
+  echo "Mem-backup tema di sistem"
+  cp -rf "$SISTEM" "$b"
+  # sudo rm -R /usr/lib/manokwari/system/*
+}
+function bersih {
+  rm -rf $PWD/backup/*
+  echo "Folder backup telah dikosongkan"
+}
+function bantuan {
+	echo -e "Help for Manokwari Theme Installer (MTI)" 
+	echo -e ""
+	echo -e "SYNOPSIS"
+	echo -e "\t mti [COMMAND] [FILE] [OPTION]"
+	echo -e ""
+	echo -e "DESCRIPTION"
+	echo -e "\t pasang,install"
+	echo -e "\t \t install theme\n"
+	echo -e "\t salin,backup"
+	echo -e "\t \t backup theme installed in system"
+}
+
+case $KOMAN in
+  tema|theme)
+	  tema;;
+  lihat|show)
+	  lihat;;
+  pasang|install)
+	  pasang;;
+  salin|backup)
+	  backup;;
+  bersih|clean)
+   	bersih;;	  
+  bantuan|help)
+      bantuan;;
+esac	  
