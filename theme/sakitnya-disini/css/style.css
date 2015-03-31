@@ -1,0 +1,316 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    font-family: Cantarell, Sans Serief;
+    font-size: 14px;
+}
+
+.ui-page, .ui-content {
+    color: #1a1a1a;
+    margin: 0px;
+    padding: 0px;
+}
+
+.ui-page {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    color: #FFC0CB;
+    background:#5A5A5A url(../img/cita-citata.jpg) bottom left no-repeat;
+    background-size:265px;
+    margin: 0px;
+    padding-top: 2px;
+}
+
+html {
+    overflow: hidden;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.ui-mobile-viewport {
+}
+
+.ui-animation-slide {
+   -webkit-transition: all 0.2s ease-in-out;
+}
+
+.ui-listview {
+    list-style:none;
+    margin: 5px 5px 5px 5px;
+    vertical-align: middle;
+    padding: 0px;
+    width: 240px;
+}
+
+.ui-content {
+    margin: 5px 2px 0px 5px;
+    height: 94%;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.ui-listview-item-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.ui-listview-item-text {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.ui-system {
+}
+
+.ui-listview-item {
+    background: transparent;
+    color: #FFC0CB;
+    text-shadow: 0 1px 1px #272727;
+    display: block;
+    min-height: 28px;
+    cursor: pointer;
+    padding: 6px 6px 0 10px;
+    margin: 0px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.ui-listview-header {
+    color: #4D4D4D;
+    text-align: center;
+    vertical-align:middle;
+    padding: 1px 20px 3px 20px;
+    background: #FE7C93;
+
+}
+.ui-listview-item:hover,
+.ui-collapsible-header:hover {
+    color: #fff;
+	text-shadow: 0 1px 1px #272727;
+    background-image: -webkit-linear-gradient(#FF8C9F, #FE7C93);
+    -webkit-transition: all 0.2s ease-in-out;
+    
+}
+
+.ui-listview-first-child,
+.ui-collapsible-header-top {
+   /* border-top-left-radius: 3px;
+    border-top-right-radius: 3px; */
+
+}
+.ui-listview-last-child,
+.ui-collapsible-header-bottom {
+   /* border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;*/
+
+}
+
+.ui-link {
+    text-decoration: none;
+    color: inherit; 
+    vertical-align: middle;
+}
+
+span {
+    vertical-align: middle;
+}
+
+.ui-collapsible {
+    list-style:none;
+    margin: 0 5px 0 5px;
+    vertical-align: middle;
+    width: 240px;
+}
+
+.ui-collapsible-header {
+    background: transparent;
+    margin: 0px;
+    min-height: 28px;
+    padding: 6px 6px 0 10px;
+    display: block;
+    color: #FFC0CB;
+    text-shadow: 0 1px 1px #393939;
+    cursor: pointer;
+}
+
+.ui-collapsible-control-group {
+    overflow: hidden;
+    margin: 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+.ui-back-button {
+    background-image: url("../img/back.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 30px;
+    height: 24px; 
+    margin: -1px 0px 0px 0px;
+    padding: 0px;
+    cursor: pointer;
+    position:absolute;    
+}
+
+.ui-header {
+    color: #FFC0CB;
+    text-shadow: 0 1px 1px #393939;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Aurulent Sans';
+    font-weight: bold;
+    padding: 1px 22px 3px 20px;
+}
+
+.ui-button {
+    display: block;
+    color: #1a1a1a;
+    text-align:center;
+    padding: 5px 0 5px 0;
+    line-height: 1;
+    background:#D5D5D5;
+    margin: 2px 0 2px 0;
+}
+
+.ui-button:after,
+.ui-button:hover {
+    background:#7DAEDF;
+    color:#FFFFFF;
+}
+
+.ui-popup {
+    height: auto;
+    padding: 2px 0 3px 0;
+    -webkit-transition: 0.1s ease-in-out;
+}
+
+#popup-pool {
+    display: none;
+}
+
+#userAccount {
+    position: fixed;
+    clear: both;
+    bottom: 0;
+    height: 60px;
+    width: 260px; 
+    margin: 0px 0px -60px 0px;
+    padding: 10px 10px 0px 15px;
+    z-index: 100;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    cursor: pointer;
+    -webkit-transition: margin-bottom 0.3s, bottom 0.2s ease-out;
+	 background-image: -webkit-linear-gradient(#FF8C9F, #FE7C93);
+    color:#1a1a1a;
+    border-top:1px solid #FC4263;
+ 
+}
+
+#userAccount:hover {
+    margin-bottom: 0px;
+}
+
+#userAccount img:hover {
+	-webkit-transform:scale(1.05);
+}
+#userAccount img {
+    border: 4px solid #fff;
+    float: left;
+    width: 48;
+    height: 48;
+    margin-right: 10px;
+}
+
+#userAccount h1 {
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    font-family: 'Aurulent Sans';
+}
+
+#userAccount span {
+    font-size: 14px;
+    color: white;
+    font-family: 'Aurulent Sans';
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(191,191,191,0.5)
+    /*-webkit-box-shadow: inset 0 0 6px rgba(128,128,128,0.8);*/
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(191,191,191,0.5)
+    /*-webkit-box-shadow: inset 0 0 6px rgba(128,128,128,0.8);*/
+}
+::-webkit-scrollbar-track:hover {
+	background: rgba(191,191,191,0.1);
+}
+
+.ui-expandable-icon {
+    background-image: url("../img/go-next.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 22px;
+    height: 22px;
+    float: right;
+    border-left: 1px solid #FFC0CB;
+}
+
+.ui-expandable-icon-expanded {
+    background-image: url("../img/go-down.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 22px;
+    height: 22px;
+}
+
+.image{
+	width:25px;
+	float:left;
+	margin:0px 10px 5px 5px;
+	padding:0 ;
+}
+/***********************************
+ * Fonts Collections *
+ * *********************************/
+
+@font-face {
+    font-family: 'Arimo Bold';
+    src: url(../fonts/Arimo-Bold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Arimo Regular';
+    src: url(../fonts/Arimo-Regular.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'TrendexLightSSi.ttf';
+    src: url(../fonts/TrendexLightSSi.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Aurulent Sans Bold';
+    src: url(../fonts/AurulentSans-Bold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Aurulent Sans';
+    src: url(../fonts/AurulentSans-Regular.otf);
+    font-weight: 600;
+}

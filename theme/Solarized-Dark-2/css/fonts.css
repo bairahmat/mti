@@ -1,0 +1,28 @@
+/***********************************
+ * Fonts Collections *
+ * *********************************/
+@font-face {
+    font-family: 'Arimo Bold';
+    src: url(../fonts/Arimo-Bold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Arimo Regular';
+    src: url(../fonts/Arimo-Regular.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'TrendexLightSSi.ttf';
+    src: url(../fonts/TrendexLightSSi.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Aurulent Sans Bold';
+    src: url(../fonts/AurulentSans-Bold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Aurulent Sans';
+    src: url(../fonts/AurulentSans-Regular.otf);
+    font-weight: 600;
+}
