@@ -106,7 +106,18 @@ function bantuan {
 	
 	
 }
-
+#buatdaftar
+function buatdaftar {
+	rm "tema.txt"
+	rm "salinan.txt"
+	
+	T=($(ls $TEMA))
+	S=($(ls $SALINAN))
+	
+	for i in ${T[*]}; do
+		echo "$i|" >> "tema.txt"
+	done
+}
 case $KOMAN in
   lihat|show)
 	  lihat;;
@@ -120,6 +131,8 @@ case $KOMAN in
    	bersih;;	  
   bantuan|help)
       bantuan;;
+  buatdaftar)
+      buatdaftar;;
 	*)
 		echo "koman tidak ada";;
 esac	  

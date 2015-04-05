@@ -1,0 +1,58 @@
+body{
+	font-family:sans;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+
+#wrapper{
+	width: auto;
+	height: auto;
+}
+label {
+	font-weight:bold;
+}
+div.konten{
+	margin:0;
+}
+div.kiri{
+	width:200px;
+	height:100%;
+	background:#7D0A00;
+	position:fixed;
+}
+div.kanan{
+	width:700px;
+	height:100%;
+	background:#FFFFFF;
+	position:absolute;
+	margin-left:200px;
+}
+div.kiri a{
+	width:100%;
+	float:left;
+	padding:10px 20px 10px 10px;
+	color:#fff;
+	border-bottom:1px solid #610600;
+	text-align:right;
+	margin-left:-30px;
+}
+div.kiri a:hover{
+	background:#fff;
+	color:#000;
+	
+}
+section{
+	padding:3px 5px 5px 10px;
+	height:100%;
+}
+.btn{
+	background:#1E90FF;
+	border:none;
+	padding:5px;
+	border-radius:3px;
+	color:#fff;
+	margin-right:20px;
+}
