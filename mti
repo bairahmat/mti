@@ -56,7 +56,7 @@ function kembali {
 	FILE=($(ls $SALINAN))
 
 	for i in ${FILE[*]}; do
-		echo " $(($COUNT+1)) $i"
+		echo -e " \e[39m$(($COUNT+1)) \e[34m$i\e[39m"
 		let COUNT++;
 	done
 
@@ -94,13 +94,17 @@ function bantuan {
 	echo -e "Help for Manokwari Theme Installer (MTI)" 
 	echo -e ""
 	echo -e "SYNOPSIS"
-	echo -e "\t mti [COMMAND] [FILE] [OPTION]"
+	echo -e "\t mti [COMMAND] [COMMAND2] [OPTION]"
 	echo -e ""
-	echo -e "DESCRIPTION"
-	echo -e "\t pasang,install"
-	echo -e "\t \t install theme\n"
-	echo -e "\t salin,backup"
-	echo -e "\t \t backup theme installed in system"
+	echo -e "EXAMPLE"
+	echo -e "\e[39m \t $ mti install [name_theme] \n \t \t  \e[34mInstall a theme from MTI directory"
+	echo -e "\e[39m \t $ mti install [name_theme] -b \n \t \t  \e[34mInstall a theme from MTI directory with backup installed theme in system"
+	echo -e "\e[39m\t $ mti show theme \n \t \t  \e[34mshow list of theme"
+	echo -e "\e[39m\t $ mti show [name_theme] \n \t \t  \e[34mshow theme preview"
+	echo -e "\e[39m\t \$ mti show backup \n \t \t  \e[34mshow backup theme"
+	echo -e "\e[39m\t \$ mti restore  \n \t \t \e[34mshow restore menu"
+	
+	
 }
 
 case $KOMAN in
