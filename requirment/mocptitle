@@ -1,3 +1,0 @@
-#killall notify-osd
-notify-send --icon=audio-x-generic --expire-time=3000 "Music on Console" "`mocp -Q %title`"
-mocp -Q %title > /usr/lib/manokwari/system/mocptitle.txt

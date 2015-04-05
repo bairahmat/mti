@@ -1,51 +1,94 @@
 #!/bin/bash
-PWD=($(pwd))
+MTI="/opt/mti"
 #SISTEM="/usr/lib/manokwari/system"
-SISTEM="$PWD/test/system"
-TEMA="$PWD/theme/"
-KOMAN="$1"
-NAMA="$2"
-OPSI="$3"
+#SISTEM="$MTI/test/system"
+INSTALL="$MTI/installed/system"
+TEMA="$MTI/tema/"
+SALINAN="$MTI/salinan/"
+export KOMAN="$1"
+export KOMAN2="$2"
+export OPSI="$3"
 
-
-function tema {
-  ls "$PWD/theme"
-}
 function lihat {
-  eog "$PWD/theme/$NAMA/"
+   if [ "$KOMAN2" == "tema" ]; then
+		ls $TEMA
+   elif [ "$KOMAN2" == "theme" ]; then
+		ls $TEMA
+   elif [ "$KOMAN2" == "salinan" ]; then
+		ls $SALINAN
+   elif [ "$KOMAN2" == "backup" ]; then
+      ls $SALINAN
+   else
+      eog "$TEMA$KOMAN2/"
+   fi
 }
 function pasang {
-  #cd "$SISTEM"
-  if [  -d "$PWD/theme/$NAMA" ]; then
-    case $OPSI in
-        -b)
-          backup;;
-    esac
-
-    rm -rf "$SISTEM"
-    echo "Memasang Tema $NAMA"
-    ln -s $PWD/theme/$NAMA $SISTEM
-   # killall manokwari
-  else
-    echo "Pasang: $NAMA: tidak ada berkas"
-  fi
+	if [  -d "$TEMA$KOMAN2" ]; then
+		case $OPSI in
+			-b)
+				salin;;
+		esac
+		rm -rf "$INSTALL"
+		echo "Memasang Tema $KOMAN2"
+		#ln -s "$TEMA$KOMAN2" $SISTEM
+		cp -r "$TEMA$KOMAN2" $INSTALL
+		nyalaulang
+	else
+	 echo "Pasang: $KOMAN2: tidak ada berkas"
+	fi
 }
-function backup {
-  if [ ! -d "$PWD/backup" ]; then
-    mkdir "$PWD/backup"
+function salin {
+  if [ ! -d "$SALINAN" ]; then
+    mkdir "$SALINAN"
   fi
 
   a="`date '+%F-%H-%M-%S'`"
-  b="$PWD/backup/$a"
+  b="$SALINAN$a"
   mkdir $b
 
-  echo "Mem-backup tema di sistem"
-  cp -rf "$SISTEM" "$b"
-  # sudo rm -R /usr/lib/manokwari/system/*
+  echo "Menyalinkan  tema di sistem"
+  cp -rf "$INSTALL" "$b"
+}
+function kembali {
+	echo "Daftar berkas salinan "
+	echo ""
+
+	FILE=($(ls $SALINAN))
+
+	for i in ${FILE[*]}; do
+		echo " $(($COUNT+1)) $i"
+		let COUNT++;
+	done
+
+	# Get file index =======================================================
+	echo ""
+	echo -n "Pilih nomor yang akan di kembalikan (restore): "
+	read index
+
+	if [[ ${FILE[$index-1]} != "" ]]; then
+		# Backup old theme  ================================================
+		
+
+		# Install new theme ================================================
+		echo "Mengambalikan Tema..."
+
+		rm -rf $INSTALL
+		cp -R $SALINAN${FILE[$index-1]}/* $INSTALL
+		
+
+		echo "Restart manokwari..."
+		nyalaulang
+		
+	fi
+
+	echo "Sukses mengembalikan salinan tema: "
 }
 function bersih {
-  rm -rf $PWD/backup/*
-  echo "Folder backup telah dikosongkan"
+  rm -rf $MTI/salinan/*
+  echo "Folder salinan telah dikosongkan"
+}
+function nyalaulang {
+	killall manokwari
 }
 function bantuan {
 	echo -e "Help for Manokwari Theme Installer (MTI)" 
@@ -61,16 +104,18 @@ function bantuan {
 }
 
 case $KOMAN in
-  tema|theme)
-	  tema;;
   lihat|show)
 	  lihat;;
   pasang|install)
 	  pasang;;
   salin|backup)
-	  backup;;
+	  salin;;
+  kembalikan|restore)
+	  kembali;;
   bersih|clean)
    	bersih;;	  
   bantuan|help)
       bantuan;;
+	*)
+		echo "koman tidak ada";;
 esac	  

@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo rm -rf /opt/mti/
+sudo rm -rf /usr/lib/manokwari/system
+sudo rm  /usr/local/bin/mti
+sudo apt-get install manokwari --reinstall

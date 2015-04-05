@@ -1,0 +1,15 @@
+black
+black-transparent
+embun
+embun-zutkiwo
+flat-blue
+kamuflase
+manokwari-0.2.1.47
+manokwari-zukitwo
+nonofficial
+pakazis
+pakpiko
+soft-grey
+solarized
+solarized-no-bottom
+vertex

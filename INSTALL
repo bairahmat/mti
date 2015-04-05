@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo mkdir /opt/mti
+sudo chmod -R 777 /opt/mti
+cp -rf * /opt/mti/
+cp -r /usr/lib/manokwari/system /opt/mti/salinan/berkasasli/system
+cp -r /usr/lib/manokwari/system /opt/mti/installed/system
+sudo rm -rf /usr/lib/manokwari/system
+#sudo chmod -R 777 /usr/lib/manokwari/
+sudo ln -s /opt/mti/mti /usr/local/bin/mti
+sudo ln -s /opt/mti/installed/system /usr/lib/manokwari/system
