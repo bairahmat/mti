@@ -1,0 +1,120 @@
+<html>                                                                  
+<head>                                                                  
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/sessions.css" />
+
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script>
+(function($) {
+	jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+  };
+  function listFilter(header, list) { 
+	// header is any element, list is an unordered list
+   // create and add the filter form to the header
+    var form = $("<form>").attr({"class":"filterform","action":"#"}),
+        input = $("<input>").attr({"class":"filterinput","type":"text","id":"searchinput","placeholder":"Search"});
+    $(form).append(input).appendTo(header);
+
+     $(input)
+		.click( function(){
+			$(this).val("");
+			$(list).find(".ui-listview-item").slideUp().hide();
+		})
+		.keyup( function () {
+			var filter = $(this).val();
+			if(filter) {
+				// this finds all links in a list that contain the input,
+				// and hide the ones not containing the input while showing the ones that do
+				$(list).find("a:not(:Contains(" + filter + "))").parent().slideUp();	
+				$(list).find("a:Contains(" + filter + ")").parent().slideDown();
+				$(list).show();
+			} 
+			else if(filter==""){
+				$(list).find(".ui-listview-item").slideUp().hide();
+			}
+			else{
+				$(list).hide();
+			}
+			return false;
+		})
+		.focusout(function(){
+         
+		});
+  }
+
+  //ondomready
+	$(document).ready(function() {
+		$(document).keydown(function() {
+			$("input").focus();
+		});
+		listFilter($("#header"), $("#listSearch"));
+		//var ars = $("#listSearch").html();
+		//$("#test").text(ars);
+	});
+}) (jQuery);
+</script>
+</head>                                                              
+<body>                                                                  
+    <div id="userAccount">
+        <img src="/usr/share/icons/gnome/48x48/status/avatar-default.png"/>
+		<h1>Username</h1>
+		<span translate="no">Hostname</span>
+	</div>
+
+	<div data-role="page" id="first">
+		<div data-role="header">
+		<span>Applications</span>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<div id="header" ></div>
+		<div id="listSearch" data-role="listview-search"></div>
+<!--
+		<textarea id="test"></textarea>
+-->
+		<div id="listApplications" data-role="collapsible-set"><div class="ui-collapsible-icon"></div></div>
+		
+
+	<div data-role="listview" id="listGeneral" data-inset="true">
+		<div data-role="header">Places and settings</div>
+		<div id="settings">
+			<a href="#locations" data-transition="slide" id="btn-locations"><div class="ui-places-icon"></div><span>Locations</span><div class="ui-expandable-icon"></div></a>
+			<a href="#" data-tap-handler="handleSettings"><div class="ui-system-icon"></div><span>Settings</span></div></a>
+	
+	<div data-role="header">Sessions</div>
+		<div id="sessions">
+			<li><a href="#" data-tap-handler="handleLockScreen"><h2>Lock Screen</h2><span>Secure lock screen</span><img src="img/lock.svg"></a></li>
+			<li><a href="#" data-tap-handler="handleLogOut"><h2>Logout</h2><span>Logout of this session</span><img src="img/logout.svg"></a></li>
+			<li><a href="#" data-tap-handler="handleReboot"><h2>Restart</h2><span>Reboot the computer</span><img src="img/reboot.svg"></a></li>
+			<li><a href="#" data-visibility="shutdownEnabled" data-tap-handler="handleShutDown"><h2>Shutdown</h2><span>Powering off the computer</span><img src="img/shutdown.svg"></a></li>
+		</div>
+		</div>
+	</div>
+	</div><!-- /content -->
+	</div><!-- /page -->
+
+	<div data-role="page" id="locations">
+		<div data-role="header" data-add-back-btn="true">
+		<span>Places</span>
+	</div><!-- /header -->
+
+	<div data-role="content">   
+	<div data-role="listview" id="listPlaces" data-inset="true">
+   
+	</div><!-- /content -->
+	</div><!-- /page -->
+
+	<div id="popup-pool">
+		<div data-role="popup" id="add_to_fav_or_desktop">
+		<a id="add_to_desktop" href="#" data-role="button" data-rel="back"><span>Add to Desktop</span></a>
+	</div>
+
+	<div data-role="popup" id="remove_from_favorites">
+		<a id="remove_from_favorites_button" href="#" data-role="button" data-rel="back"><span>Remove from Favorites</span></a>
+	</div>
+	</div>
+</body>                                                                 
+</html>

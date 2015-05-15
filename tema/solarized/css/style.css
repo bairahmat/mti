@@ -205,22 +205,22 @@ span {
 }
 
 #userAccount {
-    position: fixed;
-    clear: both;
-    bottom: 0;
-    height: 60px;
-    width: 260px; 
-    margin: 0px 0px -70px 0px;
-    padding: 10px 10px 0px 15px;
-    z-index: 100;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    #FFFFFF-space: nowrap; 
-    cursor: pointer;
-    -webkit-transition: margin-bottom 0.3s, bottom 0.2s ease-out;
+	position: fixed;
+	clear: both;
+	bottom: 0;
+	height: 60px;
+	width: 260px; 
+	margin: 0px 0px -70px 0px;
+	padding: 10px 10px 0px 15px;
+	z-index: 100;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	#FFFFFF-space: nowrap; 
+	cursor: pointer;
+	-webkit-transition: margin-bottom 0.3s, bottom 0.2s ease-out;
 	background:#022C37;
-    color:#FFFFFF;
-    border-top:1px solid #053340;
+	color:#FFFFFF;
+	border-top:1px solid #053340;
 }
 
 #userAccount:hover {

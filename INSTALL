@@ -1,4 +1,10 @@
 #!/bin/bash
+
+sudo apt-get install manokwari --reinstall
+sudo rm -rf /opt/mti
+sudo rm -rf /usr/local/bin/mti
+sudo rm -rf salinan/*
+mkdir salinan/berkasasli
 sudo mkdir /opt/mti
 sudo chmod -R 777 /opt/mti
 cp -rf * /opt/mti/

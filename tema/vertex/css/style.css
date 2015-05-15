@@ -54,9 +54,6 @@ html {
     margin-bottom: 80px;
 }
 
-
-
-
 .ui-listview-item-icon {
     vertical-align: top;
     text-align:center;
@@ -234,19 +231,16 @@ span {
     clear: both;
     bottom: 0;
     height: 60px;
-    width: 100%; 
-    margin: 0px 0px -65px 0px;
+    width: 260px; 
+    margin: 0px 0px -70px 0px;
     padding: 10px 10px 0px 15px;
     z-index: 100;
     overflow: hidden;
     text-overflow: ellipsis;
-    #fff-space: nowrap; 
+    #FFFFFF-space: nowrap; 
     cursor: pointer;
     -webkit-transition: margin-bottom 0.3s, bottom 0.2s ease-out;
-    color:#1A1A1A;
-    background: -webkit-linear-gradient(#F4F4F4,#E2E3E5);
-    border-top:1px solid #BFBFBF;
- 
+    border-top:1px solid #F3F3F5;
 }
 
 #userAccount:hover {
@@ -257,27 +251,25 @@ span {
 	-webkit-transform:scale(1.05);
 }
 #userAccount img {
-    border: 3px solid #fff;
     float: left;
     width: 48;
     height: 48;
     margin-right: 10px;
     border-radius:25px;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 0 3px #FFFFFF;
 }
-
 #userAccount h1 {
     font-size: 18px;
+    color:#1A1A1A;
     margin: 0px;
+    font-family: 'Aurulent Sans';
+}
+#userAccount span {
+    font-size: 14px;
     color:#1A1A1A;
     font-family: 'Aurulent Sans';
 }
 
-#userAccount span {
-    font-size: 14px;
-    font-family: 'Aurulent Sans';
-    color:#1A1A1A;
-}
 
 ::-webkit-scrollbar {
     width: 7px;

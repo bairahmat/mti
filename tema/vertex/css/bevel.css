@@ -117,20 +117,21 @@
 	text-align:center;
 	cursor:pointer;
 	-webkit-transition: all 0.2s ease-in-out;
-	border-radius:3px;	
-	background:#F4F4F4;
-	border: 1px solid #afafaf;
+	border-radius:3px;
+	background:transparent;
+	border:1px solid transparent;	
+	
 }
 .system li:hover{
-	background:-webkit-linear-gradient(#4080FB,#6096FF);
-	border: 1px solid #4080FB;
+	background:linear-gradient(#FAFAFA,#E6E6E6);
+	box-shadow:0 1px 1px rgba(0,0,0,0.5);
+	border: 1px solid #afafaf;
 	color:#4D4D4D;	
 }
 .system li:focus,
 .system li:active{
-	box-shadow:inset 0px 3px 4px rgba(0,0,0,0.2);
-	background:#7F7F7F;
-	border:1px solid #4D4D4D;
+	box-shadow:inset 0px 3px 5px rgba(0,0,0,0.2);
+	background:linear-gradient(#E6E6E6,#FAFAFA);
 }
 #time {
 	width: auto;
@@ -194,17 +195,21 @@
 	cursor:pointer;
 	border: 1px solid #BFBFBF;
 	border-radius:50px;
-	background:#F4F4F4;
-	border: 1px solid #afafaf;
+	background:transparent;
+	border: 1px solid transparent;
 }
-.music li:hover,
-.music .selected{
-	background:-webkit-linear-gradient(#4080FB,#6096FF);
-	border: 1px solid #4080FB;
+.music li:hover{
+	background:linear-gradient(#FAFAFA,#E6E6E6);
+	box-shadow:0 1px 1px rgba(0,0,0,0.5);
+	border: 1px solid #afafaf;
+	color:#4D4D4D;	
 	-webkit-transition: all 0.2s ease-in-out;
 }
 .music li:focus,
-.music li:active,
+.music li:active{
+	box-shadow:inset 0px 3px 5px rgba(0,0,0,0.2);
+	background:linear-gradient(#E6E6E6,#FAFAFA);
+}
 .music .selected{
 	box-shadow:inset 0px 3px 4px rgba(0,0,0,0.2);
 	background:#7F7F7F;
