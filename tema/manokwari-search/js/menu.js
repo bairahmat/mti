@@ -555,7 +555,6 @@ var menu = (function() {
         // kick the tap hold detector
         setTimeout(linkHandleTapHold, 1100, e, target);
     }
-
     var linkHandleMouseUp = function(e) {
         e.stopPropagation();
         e.preventDefault();
@@ -612,6 +611,13 @@ var menu = (function() {
             target.attr("mouse-is-down", false);
         }
     }
+    //var linkHandleEnter = function(e) {
+		//if(e.which == 13){
+			//$("#listSearch").find(".ui-listview-item:visible:first").click();
+			//return false;
+		//} 
+	 //}
+    
 
     var setup = function() {
         setupPages();
@@ -852,8 +858,10 @@ var menu = (function() {
                 e.find("div").removeClass("ui-listview-first-child").removeClass("ui-listview-last-child");
                 e.find("div[data-role='header']").removeClass("ui-header");
                 e.find(".ui-listview-item").slideUp().hide();
-                e.find("div[data-role='collapsible-header']").hide();
                 e.find("div[data-role='controlgroup']").unwrap("div[data-role='collapsible']");
+                e.find(".ui-listview-item").unwrap("div[data-role='controlgroup']");
+                e.find("div[data-role='collapsible-header']").remove();
+                //e.find(".ui-listview-item:visible").sort();
 
                 for (var i = 0; i < e.length; i ++) {
                     console.log(e[i].outerHTML);
@@ -865,6 +873,7 @@ var menu = (function() {
         e.on("mousedown", ".ui-listview-item", linkHandleMouseDown);
         e.on("mouseup", ".ui-listview-item", linkHandleMouseUp);
         e.on("click", ".ui-listview-item", linkHandleClick);
+        //e.on("keypress", ".filterinput", linkHandleEnter);
 
         setupBasicStyle();
     }

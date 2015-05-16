@@ -101,6 +101,7 @@ html {
 }
 
 .ui-listview-item:hover,
+.ui-listview-item:focus,
 .ui-collapsible-header:hover {
     color: #fff;
     background: #444;
@@ -311,7 +312,11 @@ span {
 /** search **/
 #listSearch{
 	margin-bottom:20px;
-	padding:0 5px 0 5px;
+	padding:0;
+}
+#listSearch .ui-listview-item{
+	width:90%;
+	margin:0 auto 0 auto;
 }
 .filterform {
 	width:auto;
