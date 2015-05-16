@@ -19,7 +19,18 @@
 	function dec_sort(a, b){
 		return ($(b).text()) > ($(a).text()) ? 1 : -1;    
 	}
-  function listFilter(header, list) { 
+	//remove duplicate
+	function removeDup(a){
+		var seen = {};
+		$(a).each(function() {
+			var txt = $(this).text();
+				if (seen[txt])
+					$(this).remove();
+				else
+					seen[txt] = true;
+		});
+	}
+	function listFilter(header, list) { 
 	// header is any element, list is an unordered list
    // create and add the filter form to the header
     var form = $("<div>").attr({"class":"filterform"}),
@@ -40,12 +51,8 @@
 				$(list).find("a:Contains(" + filter + ")").parent().slideDown().show();
 				$(list).show();				
 			}
-			else if(filter==""){
-				$(list).find(".ui-listview-item").slideUp().hide();
-			}
-			else{
-				$(list).hide();
-			}
+			else if(filter==""){$(list).find(".ui-listview-item").slideUp().hide();}
+			else{$(list).hide();}
 			return false;
 		})
 		.keypress(function(e){
@@ -55,15 +62,14 @@
 			}
 		});
   }
-
   //ondomready
 	$(document).ready(function() {
-		$(document).keydown(function() {
-			$("input").focus();
-		});
+		$(document).keydown(function() {$("input").focus();});
 		listFilter($("#header"), $("#listSearch"));
 		$("#listSearch .ui-listview-item").sort(asc_sort).appendTo('#listSearch');
+		removeDup(".ui-listview-item");
 		
+		//debuger
 		//var ars = $("#listSearch").html();
 		//$("#test").text(ars);
 	});
